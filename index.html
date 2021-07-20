@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="add_item_container">
+            <div class="title">
+                <h3>Add Item</h3>
+            </div>
+            <label for="new_item" > Item Name
+                <input type="text" class="new_item" name="new_item" id="new_item" placeholder="Queso, Pan ...">
+            </label>
+            <!-- <input type="submit"> -->
+            <div class="button_div">
+                <input onclick="createNewItem()" class="add_btn"type="button" value="Add">
+            </div>
+        </div>
+
+        <div class="item_list_container">
+
+        </div>
+
+        <div class="bill">
+            <span>Total: </span>
+            <span id="Account_total"></span>
+            <div class="button_div">
+                <input type="button" value="Calculate">
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>

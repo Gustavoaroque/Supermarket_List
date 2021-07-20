@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background: linear-gradient(180deg, #073B4C 0%, rgba(17, 138, 178, 0.68) 100%);
+    background-attachment: fixed;
+}
+
+main {
+    /* margin-top: 50px; */
+    width: 340px;
+    background-color: #FFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.add_item_container{
+    padding-top: 17px;
+    /* margin-top: 10px; */
+    margin-left: auto;
+    margin-right: auto; 
+    width: 305px;
+    height: 150px;
+    background: #F5F5F5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.button_div {
+    padding-top: 23px;
+    text-align: center;
+}
+.add_btn {
+    width: 100px;
+    height: 25px;
+    border: 1px solid #06D6A0;
+    border-radius: 15px;
+    font-size: 14px;
+}
+label {
+    padding-left: 39px;
+    padding-top: 16px;
+}
+
+.title {
+    padding-top: 17px;
+    padding-left: 39px;
+}
+
+.item_list_container{
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #F5F5F5;
+    width: 305px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.div_items {
+    width: 286px;
+    height: 57px;
+    background: #EBEBEB;
+    display: grid;
+    grid-template-columns: auto 60px 45px 65px;
+    grid-gap: 5px;
+    /* justify-content: space-evenly; */
+    align-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 7px;
+}
+
+.price_input{
+    border: 1px solid #0353A4;
+    border-radius: 15px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+
+}
+.amount_input{
+    border: 1px solid #0353A4;
+    border-radius: 15px;
+    width: 55px;
+    height: 20px;
+    text-align: center;
+
+}
+
+.delete_input{
+    border: 1px solid #E42525;
+    color: #E42525;
+    border-radius: 15px;
+    width:60px; 
+    height:20px ; 
+    text-align: center;
+}
+
+.bill {
+    display: grid;
+    
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #F5F5F5;
+    width: 305px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.bill span {
+    padding-top: 15px;
+}
