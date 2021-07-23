@@ -31,13 +31,13 @@ function createNewItem(){
     //Add the amount_input
     newDiv.appendChild(amount_input)
     amount_input.setAttribute("class","amount_input")
-    amount_input.setAttribute("id","amount_"+input_name.value)
+    amount_input.setAttribute("id","amount_"+click_times)
     amount_input.setAttribute("placeholder","Amount")
     amount_input.setAttribute("type","number")
     //Add the price_input
     newDiv.appendChild(price_input)
     price_input.setAttribute("class","price_input")
-    price_input.setAttribute("id","price_"+input_name.value)
+    price_input.setAttribute("id","price_"+click_times)
     price_input.setAttribute("placeholder","Price")
     price_input.setAttribute("type","number")
     
@@ -54,18 +54,33 @@ function createNewItem(){
     // delete_input.setAttribute("value","Delete")
     
     click_times= click_times + 1
-    height_t = click_times*65
+    // height_t = click_times*65
 
     
-    list_container.style.height = ''+ height_t + 'px';
+    // list_container.style.height = ''+ height_t + 'px';
 }
 
 function delete_item(element_del){
     var element_to_delete = '#'+element_del;
     const list_container = document.querySelector('.item_list_container')
     const child = document.querySelector(element_to_delete)
-    list_container.removeChild(child)
+    child.style.display='none'
     console.log(child)
     
 }
 
+function calculate() {
+    const span_total = document.querySelector("#Account_total")
+    span_total.innerHTML=""
+    // span_total.value= ""
+    var total = 0
+    for (var i = 0; i <click_times ; i++ ){
+        var element_price = document.querySelector('#price_'+i)
+        var element_amount = document.querySelector('#amount_'+i)
+        var total_element = element_price.value * element_amount.value
+        // console.log(total_element)
+        total = total + total_element
+    }
+    const text_total = document.createTextNode(total)
+    span_total.appendChild(text_total)
+}
