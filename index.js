@@ -48,7 +48,7 @@ function createNewItem(){
     delete_input.setAttribute("type","button")
     delete_input.setAttribute("value","Delete")
     var att = document.createAttribute("onClick")
-    att.value = "delete_item('div_"+click_times+"')";
+    att.value = "delete_item('"+click_times+"')";
     delete_input.setAttributeNode(att)
 
     // delete_input.setAttribute("value","Delete")
@@ -61,11 +61,15 @@ function createNewItem(){
 }
 
 function delete_item(element_del){
-    var element_to_delete = '#'+element_del;
+    var element_to_delete = '#div_'+element_del;
     const list_container = document.querySelector('.item_list_container')
     const child = document.querySelector(element_to_delete)
+    const amount_delete = document.querySelector("#amount_"+element_del)
+    amount_delete.value="0"
+    const price_delete = document.querySelector("#price_"+element_del)
+    price_delete.value = "0"
     child.style.display='none'
-    console.log(child)
+    console.log(price_delete.value)
     
 }
 
